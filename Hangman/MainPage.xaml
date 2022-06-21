@@ -1,0 +1,56 @@
+﻿<Page
+    x:Class="Hangman.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Hangman"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="myGrid" Background="#FF9CBBA2" FocusVisualPrimaryBrush="White">
+        <Button x:Name="NewGame_btn" Content="NewGame&#xD;&#xA;" Height="111" Margin="771,429,0,0" VerticalAlignment="Top" Width="317" Click="NewGame_btn_Click" FontSize="49" FontFamily="Ink Free"/>
+        <ListBox x:Name="CharList" HorizontalAlignment="Left" Height="928" Margin="1759,10,0,0" VerticalAlignment="Top" Width="151">
+        </ListBox>
+        <Button x:Name="Guess_btn" Content="Guess&#xD;&#xA;" Height="50" Margin="1759,949,0,0" VerticalAlignment="Top" Width="151" Click="Guess_btn_Click"/>
+        <TextBox x:Name="Strikes_txt" HorizontalAlignment="Left" Height="71" Margin="10,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="244"/>
+        <Image x:Name="_07Img" HorizontalAlignment="Left" Height="49" Margin="1340,418,0,0" VerticalAlignment="Top" Width="177" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+            <Image.RenderTransform>
+                <CompositeTransform Rotation="137.841"/>
+            </Image.RenderTransform>
+        </Image>
+        <Rectangle x:Name="Rec_Pole" HorizontalAlignment="Left" Height="282" Margin="790,159,0,0" Stroke="Black" VerticalAlignment="Top" Width="11" Fill="Black" Visibility="Collapsed"/>
+        <Rectangle x:Name="Rec_Bar" HorizontalAlignment="Left" Height="9" Margin="801,159,0,0" Stroke="Black" VerticalAlignment="Top" Width="159" Fill="Black" Visibility="Collapsed"/>
+        <Rectangle x:Name="Rec_Hang" HorizontalAlignment="Left" Height="43" Margin="951,168,0,0" Stroke="Black" VerticalAlignment="Top" Width="9" Fill="Black" Visibility="Collapsed"/>
+        <Rectangle x:Name="Rec_Head" HorizontalAlignment="Left" Height="46" Margin="915,211,0,0" Stroke="White" VerticalAlignment="Top" Width="81" Visibility="Collapsed">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="/Assets/Head.png" Stretch="Uniform"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle x:Name="Rec_Body" HorizontalAlignment="Left" Height="65" Margin="953,257,0,0" Stroke="Black" VerticalAlignment="Top" Width="6" Fill="Black" Visibility="Collapsed"/>
+        <Rectangle x:Name="Rec_Hand1" HorizontalAlignment="Left" Height="5" Margin="915,267,0,0" Stroke="Black" VerticalAlignment="Top" Width="42" Fill="Black" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Visibility="Collapsed">
+            <Rectangle.RenderTransform>
+                <CompositeTransform Rotation="39.838"/>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle x:Name="Rec_Hand2" HorizontalAlignment="Left" Height="5" Margin="956,266,0,0" Stroke="Black" VerticalAlignment="Top" Width="42" Fill="Black" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Visibility="Collapsed">
+            <Rectangle.RenderTransform>
+                <CompositeTransform Rotation="138.29"/>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle x:Name="Rec_Leg1" HorizontalAlignment="Left" Height="5" Margin="913,331,0,0" Stroke="Black" VerticalAlignment="Top" Width="42" Fill="Black" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Visibility="Collapsed">
+            <Rectangle.RenderTransform>
+                <CompositeTransform Rotation="142.625"/>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle x:Name="Rec_Leg2" HorizontalAlignment="Left" Height="5" Margin="955,332,0,0" Stroke="Black" VerticalAlignment="Top" Width="42" Fill="Black" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Visibility="Collapsed">
+            <Rectangle.RenderTransform>
+                <CompositeTransform Rotation="39.838"/>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <TextBlock x:Name="Welcome_txt" HorizontalAlignment="Left" Height="150" Margin="599,228,0,0" TextWrapping="Wrap" Text="Welcome to Hangman, in this game you'll need to guess the word that the computer choose, you have 9 tries to do so." VerticalAlignment="Top" Width="672" FontSize="30" FontFamily="SimSun"/>
+        <TextBlock HorizontalAlignment="Left" Height="113" Margin="764,10,0,0" TextWrapping="Wrap" Text="Hangman" VerticalAlignment="Top" Width="404" FontSize="80" FontFamily="MV Boli"/>
+        <Button x:Name="Easy_btn" Content="Easy Mode (3-4 letters words)" Height="88" Margin="342,558,0,0" VerticalAlignment="Top" Width="424" FontSize="30" FontFamily="Ink Free" Click="Easy_btn_Click" Visibility="Collapsed"/>
+        <Button x:Name="Hard_btn" Content="Hard Mode (5-6 letters words" Height="88" Margin="1094,558,0,0" VerticalAlignment="Top" Width="424" FontSize="30" FontFamily="Ink Free" Click="Hard_btn_Click" Visibility="Collapsed"/>
+    </Grid>
+</Page>
